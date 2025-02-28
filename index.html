@@ -54,16 +54,16 @@
 
     <script>
         function checkPassword() {
-            const correctPassword = 123456; // Hardcoded numeric password
-            const userPassword = parseInt(document.getElementById("password").value); // Convert input to number
-            const errorMessage = document.getElementById("error-message");
-
+            const correctPassword = "123456"; // Store as a string
+            const userPassword = document.getElementById("password").value.trim(); // Get raw input
+    
             if (userPassword === correctPassword) {
-                window.location.href = "./sucess.html"; // Ensure relative path consistency
+                window.location.href = "./success.html"; // Redirect on success
             } else {
-                errorMessage.textContent = "Wrong password";
+                document.getElementById("error-message").textContent = "Wrong password";
             }
         }
     </script>
+    
 </body>
 </html>
