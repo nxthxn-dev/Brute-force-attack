@@ -54,11 +54,11 @@
 
     <script>
         function checkPassword() {
-            const correctPassword = "123456"; // Store as a string
-            const userPassword = document.getElementById("password").value.trim(); // Get raw input
+            const correctPassword = "123459";
+            const userPassword = document.getElementById("password").value.trim();
     
             if (userPassword === correctPassword) {
-                window.location.href = "./sucess.html"; // Redirect on success
+                window.location.href = "./sucess.html";
             } else {
                 document.getElementById("error-message").textContent = "Wrong password";
             }
