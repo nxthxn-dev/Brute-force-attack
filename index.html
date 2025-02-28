@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
+    <title>Brute force attack</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,12 +54,12 @@
 
     <script>
         function checkPassword() {
-            const correctPassword = "123456"; // Hardcoded numeric password
-            const userPassword = document.getElementById("password").value;
+            const correctPassword = 123456; // Hardcoded numeric password
+            const userPassword = parseInt(document.getElementById("password").value); // Convert input to number
             const errorMessage = document.getElementById("error-message");
 
             if (userPassword === correctPassword) {
-                window.location.href = "success.html"; // Redirect to success page
+                window.location.href = "./success.html"; // Ensure relative path consistency
             } else {
                 errorMessage.textContent = "Wrong password";
             }
