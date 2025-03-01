@@ -56,23 +56,14 @@
         function checkPassword() {
             const correctPassword = "123459";
             const userPassword = document.getElementById("password").value.trim();
-            let attempts = localStorage.getItem("attempts") ? parseInt(localStorage.getItem("attempts")) : 0;
-            
+    
             if (userPassword === correctPassword) {
                 window.location.href = "./sucess.html";
             } else {
-                attempts++;
-                localStorage.setItem("attempts", attempts);
                 document.getElementById("error-message").textContent = "Wrong password";
-            }
-    
-            if (attempts >= 5) {
-                alert("Brute force attack detected! Too many failed attempts.");
-                document.getElementById("error-message").textContent = "Too many failed attempts. Please try again later.";
             }
         }
     </script>
-    
     
 </body>
 </html>
